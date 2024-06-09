@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="jogodavidafase1.css">
+    <script src="pontuacao.js"></script>
+    <title>Jogo da Vida</title>
+</head>
+<header>
+<h1> No Seu Bairro (10:00 AM)</h1>
+</header>
+<body>
+<main>
+    <aside>
+
+    </aside>
+<article>
+
+</article>
+</main>
+</div>
+<aside>
+    <div id="pontuacao">1000</div>
+    <!-- Outros elementos do aside -->
+</aside>
+</body>
+<footer>
+    <div id="caixa-dialogo" onclick="proximoDialogo()">
+        <div id="dialogo-personagem" class="dialogo-personagem"> <!-- Adicionei esta linha -->
+            <img id="imagem-personagem" class="imagem-personagem" src="">
+            <div id="texto-personagem" class="texto-personagem"> <!-- Adicionei esta linha -->
+                <h2 id="nome-personagem" class="nome-personagem"></h2>
+                <p id="texto-dialogo" class="texto-dialogo"></p>
+            </div>
+      </div>
+       <center> <button class="botao-dialogo">Não</button>
+        <button onclick="respostaErrada()" class="botao-dialogo">Sim</button>
+        <a class="Reiniciar" href="index.html">Reiniciar</a>
+       </center>
+    </div>
+
+    <script>
+        
+        let dialogos = [
+            {personagem: "Personagem 1", texto: "Olá, como você está?", imagem: "http://127.0.0.1:5501/oiito.png", posicao: "esquerda"},
+            {personagem: "Personagem 2", texto: "Estou bem, obrigado! E você?", imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjO4oAKWr2egFWPOXtmB2C4Wcc-kriIV56gQ&s", posicao: "direita"},
+            {personagem: "Personagem 1", texto: "Vamos Sair?", imagem: "http://127.0.0.1:5501/oiito.png", posicao: "esquerda"},
+            {personagem: "Personagem 2", texto: "Qual Vai ser a sua Resposta", imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjO4oAKWr2egFWPOXtmB2C4Wcc-kriIV56gQ&s", posicao: "direita"},
+            // Adicione mais diálogos conforme necessário
+        ];
+
+        let indiceDialogo = 0;
+
+        function proximoDialogo() {
+            if (indiceDialogo < dialogos.length) {
+                let dialogo = dialogos[indiceDialogo];
+                document.getElementById("nome-personagem").innerText = dialogo.personagem;
+                document.getElementById("texto-dialogo").innerText = dialogo.texto;
+                document.getElementById("imagem-personagem").src = dialogo.imagem;
+                document.getElementById("dialogo-personagem").className = "dialogo-personagem " + dialogo.posicao;
+                indiceDialogo++;
+            } else {
+                // Mostra os botões quando todos os diálogos forem exibidos
+                let botoes = document.getElementsByClassName("botao-dialogo");
+                for (let i = 0; i < botoes.length; i++) {
+                    botoes[i].style.display = "inline-block";
+                }
+            }
+            
+        }
+
+        // Chama a função para iniciar o diálogo quando a página é carregada
+        window.onload = proximoDialogo();
+        window.onload = mostrarPontuacao(); 
+    </script>
+</footer>
+</html>

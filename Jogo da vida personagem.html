@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparência</title>
+    <link rel="stylesheet" type="text/css" href="Index.css">
+</head>
+
+    <style>
+        body {
+            background-image: url(https://favim.com/pd/p/orig/2018/11/27/night-room-gif-Favim.com-6606035.gif);
+        }
+            
+    #personagens {
+    display: flex;
+    justify-content: center;
+}
+
+.personagem {
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.personagem:hover {
+    transform: scale(1.1);
+}
+
+.personagem img {
+    width: 100px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+    </style>
+</div>
+<div id="personagens">
+    <!-- Personagem 1 -->
+    <div class="personagem" data-nome="Personagem 1">
+        <img src="http://127.0.0.1:5501/MicrosoftTeams-image.png" alt="Personagem 1">
+    </div>
+    <div class="personagem" data-nome="Personagem 2">
+        <img src= "http://127.0.0.1:5501/maria.png" alt="Personagem 2">
+    </div>
+    <!-- Adicione mais personagens conforme necessário -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var personagens = document.querySelectorAll('.personagem');
+    personagens.forEach(function(personagem) {
+        personagem.addEventListener('click', function() {
+            // Remova a classe 'selecionado' de todos os personagens
+            personagens.forEach(p => p.classList.remove('selecionado'));
+            // Adicione a classe 'selecionado' ao personagem clicado
+            this.classList.add('selecionado');
+            
+            // Faça algo com o personagem selecionado
+            var nomePersonagem = this.getAttribute('data-nome');
+            console.log('Personagem selecionado:', nomePersonagem);
+            window.location.href = 'fase1.html';
+        });
+    });
+});
+
+
+    </script>
+<body>
+        <center><button class="botton01"><a href="fase1.html">Continuar</a></button></center>
+        <center> <a class="Reiniciar" href="index.html">Reiniciar</a></center>
+</body>
+
+</html>

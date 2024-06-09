@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(https://cdna.artstation.com/p/assets/images/images/029/533/658/original/fernando-henrique-santamarta-final-optmized.gif?1597854013);
+	background-repeat: no-repeat;
+	background-position: center ;
+	background-size: cover;
+	color: white;
+	
+	font-family: Century Gothic;
+	font-size: 40px;
+	margin: 0 auto;
+	padding: 10px;
+	margin-left: 40px;
+	margin-top: 40px;
+	}
+	header{
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+	color: white;
+	}
+	
+	#titulo{
+	background-color: lightgrey;
+	color: black;
+	border: 5px black outset;
+	border-radius: 10px;
+	line-height: 38px;
+	border-radius: 20px;
+	padding: 30px;
+	}
+	main{
+	display: flex;
+	flex-direction: row;
+	}
+	
+	p{
+	font-size: 30px;
+	max-width: 100%;
+	padding: 20px;
+	}
+	
+	aside{
+	background-image: url(https://st3.depositphotos.com/1340907/14598/v/600/depositphotos_145989937-stock-illustration-pixel-brick-wall.jpg);
+	img{
+	margin-left: 30%;
+	}
+	max-width: 40%;
+	margin-top: 50px;
+	border-radius: 9px;
+	box-shadow: 0 0 10px black;
+	}
+	
+	h2{
+	font-size: 50px;
+	margin-left: 10%;
+	text-align: center;
+	text-decoration: underline;
+	max-width: 80%;
+	}
+	.centered-links {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+	}
+	.centered-links a {
+		margin: 10px;
+		border-radius: 20px;
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: dimgray;
+		color: black;
+		text-decoration: none;
+		transition: background-color 0.3s ease;
+		font-size: 40px;
+		box-shadow: 0 0 20px black;
+		border: 5px outset black;
+	}
+	.centered-links a[class="link1"]:hover {
+		background-color: green;
+		transition: 0.6s;
+		box-shadow: none;
+		border: 5px solid green;
+	}
+	
+	.centered-links a[class="link2"]:hover {
+		background-color: red;
+		transition: 0.5s;
+		box-shadow: none;
+		border: 5px solid red;
+	}
+	
+	article{
+	margin-right: 40px;
+	
+	}
+	link, a{
+		color: white;
+	}
+	.botton01{
+		text-align: center;
+		font-size: 100%;
+		border-radius: 10%;
+		background-color: black;
+	}
+	.Reiniciar{
+		font-size: 45%;
+		color: rgb(0, 0, 0);
+	}
+	.Titulo{
+		font-size: 80%;
+	}
+	.texto{
+		font-size: 70%;
+	}
+	.button02{
+		text-align: center;
+	}
+	.button03{
+		text-align: center;
+	}
+	.button04{
+		text-align: center;
+	}
+	.button05{
+		text-align: center;
+	}
+	.button06{
+		text-align: center;
+	}
+	.button07{
+		text-align: center;
+	}
+	html, body {
+		height: 100%;
+		margin: 0;
+	  }
+	  a{
+		text-decoration: none;
+	  }
+	  
+	  .gif-personagem {
+		background-image: url(https://favim.com/pd/p/orig/2018/11/27/night-room-gif-Favim.com-6606035.gif); 
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+	  }
+	  
